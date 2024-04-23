@@ -1,0 +1,248 @@
+nav{
+    z-index:1;
+    background-color:white;
+    position:fixed;
+    padding-left:20px;
+    padding-right:20px;
+}
+nav li{
+}
+.popup .overlay{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
+    z-index: 1;
+    display: none;
+}
+.popup .content{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%) scale(0);
+    background: white;
+    width: 600px;
+    height: 300px;
+    z-index: 1;
+    text-align: center;
+    box-sizing: border-box;
+}
+.popup .close-btn{
+    cursor: pointer;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    width: 30px;
+    height: 30px;
+    background: darkgreen;
+    color: white;
+}
+.popup.active .overlay{
+    display: block;
+}
+.popup.active .content{
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%,-50%) scale(1);
+}
+.radiusChange{
+    border-radius: 20px;
+
+}
+.alignCenter{
+    text-align: center;
+    align-items: center;
+}
+.selectOption{
+    padding-top: 10%;
+    padding-left:30%;
+    padding-right: 40%;
+    /*width: 200px;*/
+    padding-bottom: 10%;
+}
+.backgroundChange:hover{
+    color: darkgreen;
+}
+.backgroundChangeToLogo{
+    background-image: url("../images/Food-Street2.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.topPadding{
+    padding-top: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.alignLeft{
+    text-align: left;
+    align-items: flex-start;
+}
+.heading{
+    font-size: xx-large;
+}
+.btnStyle{
+    background-color: transparent;
+    width: auto;
+}
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 20px;
+}
+.instafeed-container img{
+
+
+    width: 70%;
+    height: 25%;
+    margin: 3%;
+}
+.instafeed-container img:hover{
+    opacity: 0.8;
+    -moz-opacity: 0.8;
+    -webkit-opacity:0.8;
+}
+.thumbnail:hover{
+    background-color: #696363;
+
+    box-shadow:10px 3px black;
+}
+footer + a{
+    padding: 5%;
+}
+.backgroundImage{
+    background-image: url("../images/Food-Street2.jpg");
+    background-position:center;
+    background-size: cover;
+    color: white;
+
+    /*background-repeat: no-repeat;*/
+    background-attachment: fixed;
+}
+
+
+.popup-overlay {
+    /*Hides pop-up when there is no "active" class*/
+    visibility: hidden;
+    position: absolute;
+    background: #ffffff;
+    border: 3px solid #666666;
+    width: 50%;
+    height: 50%;
+    left: 25%;
+}
+
+.popup-overlay.active {
+    /*displays pop-up when "active" class is present*/
+    visibility: visible;
+    text-align: center;
+}
+
+.popup-content {
+    /*Hides pop-up content when there is no "active" class */
+    visibility: hidden;
+}
+
+.popup-content.active {
+    /*Shows pop-up content when "active" class is present */
+    visibility: visible;
+}
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html,body{
+    display: grid;
+    height: 100%;
+    place-items: center;
+    text-align: center;
+}
+.container{
+    height: 350px;
+    width: 430px;
+    position: relative;
+}
+.container .wrapper{
+    position: relative;
+    height: 300px;
+    width: 100%;
+    border-radius: 10px;
+    background: #fff;
+    border: 2px dashed #c2cdda;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.wrapper.active{
+    border: none;
+}
+.wrapper .image{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wrapper img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.wrapper .icon{
+    font-size: 100px;
+    color: darkgreen;
+}
+.wrapper .text{
+    font-size: 20px;
+    font-weight: 500;
+    color: black;
+}
+.wrapper #cancel-btn i{
+    position: absolute;
+    font-size: 20px;
+    right: 15px;
+    top: 15px;
+    color: darkgreen;
+    cursor: pointer;
+    display: none;
+}
+.wrapper.active:hover #cancel-btn i{
+    display: block;
+}
+.wrapper #cancel-btn i:hover{
+    color: #e74c3c;
+}
+.wrapper .file-name{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    padding: 8px 0;
+    font-size: 18px;
+    color: #fff;
+    display: none;
+    background: linear-gradient(135deg, #064b04 0%, #1cb41c 100%);
+}
+.wrapper.active:hover .file-name{
+    display: block;
+}
+.container #custom-btn{
+    margin-top: 30px;
+    display: block;
+    width: 100%;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    background: linear-gradient(135deg,#064b04 0%, #0ea20e 100%);
+}

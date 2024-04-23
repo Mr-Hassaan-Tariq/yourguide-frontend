@@ -1,0 +1,42 @@
+body{
+    background-color:white;
+}
+.logo {
+    margin-left: 20%;
+    padding-top: 10%;
+}
+nav{
+    z-index:1;
+    background-color:white;
+    position:fixed;
+    padding-left:20px;
+    padding-right:20px;
+}
+.formstyle {
+    border-color: black;
+    padding-top: 10%;
+}
+a{
+    color:black;
+}
+form input{
+    margin:5px;
+}
+.centerAlign{
+    align-items:center;
+    text-align:center;
+    padding-top:5%;
+}
+.btnClr {
+    margin-top: 5%;
+    padding:3%;
+    align-items: center;
+    background-color: darkgreen;
+    color:white;
+    width:200px;
+    margin-left:25%;
+    margin-bottom: 10%;
+}
+.changeColor:hover{
+    color:darkgreen;
+}
